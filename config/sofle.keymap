@@ -104,7 +104,7 @@
                     &trans    &trans      &trans    &trans     &trans &trans  &trans    &trans   &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp DOWN UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LEFT RIGHT>;
         };
 
         raise_layer {
@@ -123,16 +123,16 @@
                         &trans       &trans       &trans       &trans        &trans  &trans  &trans    &trans         &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp DOWN UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LEFT RIGHT>;
         };
 
         adjust_layer {
-// ----------------------------------------------------------------------------------------------------------------------------
-// | BTCLR  |  BT1    |  BT2    |   BT3   |   BT4   |   BT5   |                  |      |      |       |      |       |       |
-// | EXTPWR | RGB_HUD | RGB_HUI | RGB_SAD | RGB_SAI | RGB_EFF |                  |      |      |       |      |       |       |
-// |        | RGB_BRD | RGB_BRI |         |         | GAME    |                  |      |      |       |      |       |       |
-// |        |         |         |         |         | RGB_TOG |         |      |      |      |       |      |       |       |
-//                    |         |         |         |         |         | |      |      |      |       |      |
+// -----------------------------------------------------------------------------------------------------------------------------
+// | BTCLR  |  BT1    |  BT2    |   BT3   |   BT4   |   BT5   |                   |      |      |       |      |       |       |
+// | EXTPWR | RGB_HUD | RGB_HUI | RGB_SAD | RGB_SAI | RGB_EFF |                   |      |      |       |      |       |       |
+// |        | RGB_BRD | RGB_BRI |         |         | GAME    |                   |      |      |       |      |       |       |
+// |        |         |         |         |         | RGB_TOG |        | |        |      |      |       |      |       |       |
+//                    |         |         |         |         |        | |        |      |      |       |      |
             display-name = "adjust";
             bindings = <
 &bt BT_CLR        &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                            &none &kp KP_NUM &kp KP_DIVIDE &kp KP_MULTIPLY &kp KP_MINUS &none
