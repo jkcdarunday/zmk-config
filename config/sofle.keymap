@@ -33,11 +33,18 @@
     };
 
     behaviors {
+        mt0: mod_tap_0 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <100>;
+            bindings = <&kp>, <&kp>;
+        };
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&mt ESC GRAVE>, <&kp ESC>;
+            tapping-term-ms = <100>;
+            bindings = <&mt0 ESC GRAVE>, <&kp ESC>;
         };
         inc_dec_msc: sensor_rotate_msc {
             compatible = "zmk,behavior-sensor-rotate-var";
