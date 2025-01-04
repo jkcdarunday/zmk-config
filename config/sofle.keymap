@@ -17,6 +17,9 @@
 #define RAISE 3
 #define ADJUST 4
 
+#define SCRL_UP_ENCODER MOVE_Y(ZMK_MOUSE_SCRL_VAL_ENCODER)
+#define SCRL_DOWN_ENCODER MOVE_Y(-ZMK_MOUSE_SCRL_VAL_ENCODER)
+
 / {
 
    // Activate ADJUST layer by pressing raise and lower
@@ -32,7 +35,7 @@
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&mt ESC GRAVE>, <&kp ESC>;
         };
         inc_dec_msc: sensor_rotate_msc {
@@ -70,7 +73,7 @@
                  &kp LGUI &kp LALT &kp LCTRL &kp RET    &mlt LOWER SPACE  &mlt RAISE SPACE  &kp SPACE  &kp RCTRL &kp RALT  &kp RGUI
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp DOWN UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_msc SCRL_DOWN_ENCODER SCRL_UP_ENCODER>;
         };
 
         game_layer {
@@ -83,7 +86,7 @@
                   &trans   &trans  &trans  &kp SPACE &trans       &trans    &trans  &trans   &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp DOWN UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_msc SCRL_DOWN_ENCODER SCRL_UP_ENCODER>;
         };
 
         lower_layer {
@@ -103,7 +106,7 @@
                     &trans    &trans      &trans    &trans     &trans &trans  &trans    &trans   &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LEFT RIGHT>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp DOWN UP>;
         };
 
         raise_layer {
