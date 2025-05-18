@@ -120,13 +120,13 @@
         raise_layer {
             display-name = "raise";
 // ------------------------------------------------------------------------------------------------------------
-// | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                | HOME |   (  |   [   |  ]   |  )    | DEL   |
+// |  ESC  | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                | HOME |   (  |   [   |  ]   |  )    | DEL   |
 // |       | INS  | PSCR | GUI   |       |      |                | PGUP |      |   -   |  =   |       |       |
 // |       | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ^   |  ->   | ENTER |
 // |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      | END  | HOME | JLEFT | JRGT |  END  |       |
 //                |      |       |       |      |      |  |      |      |      |       |      |
             bindings = <
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                  &kp HOME  &kp LPAR       &kp LBKT      &kp RBKT       &kp RPAR            &kp DEL
+&kp ESC    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                  &kp HOME  &kp LPAR       &kp LBKT      &kp RBKT       &kp RPAR            &kp DEL
 &trans     &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans                        &kp PG_UP &msc SCRL_UP   &kp MINUS     &kp EQUAL      &kp DEL             &trans
 &trans     &kp LALT     &kp LCTRL    &kp LSHFT    &trans       &kp CLCK                      &kp PG_DN &kp LEFT       &kp DOWN      &kp UP         &kp RIGHT           &kp RET
 &trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans        &trans  &trans  &kp END   &kp HOME       &kp LC(LEFT)  &kp LC(RIGHT)  &kp END    &trans
