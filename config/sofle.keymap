@@ -17,7 +17,7 @@
 #define RAISE 3
 #define ADJUST 4
 
-#define ZMK_MOUSE_SCRL_VAL_ENCODER 40
+#define ZMK_MOUSE_SCRL_VAL_ENCODER 128
 #define SCRL_UP_ENCODER MOVE_Y(ZMK_MOUSE_SCRL_VAL_ENCODER)
 #define SCRL_DOWN_ENCODER MOVE_Y(-ZMK_MOUSE_SCRL_VAL_ENCODER)
 
@@ -49,7 +49,7 @@
         inc_dec_msc: sensor_rotate_msc {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
-            tap-ms = <100>;
+            tap-ms = <16>;
             bindings = <&msc>, <&msc>;
         };
         mlt: mod_layer_tap {
