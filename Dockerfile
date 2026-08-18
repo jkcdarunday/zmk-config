@@ -4,10 +4,10 @@ WORKDIR /app
 
 COPY config/west.yml config/west.yml
 
-RUN west init -l config
-RUN west update
-RUN west zephyr-export
+RUN west init -l config \
+    && west update --fetch-opt=--filter=tree:0 \
+    && west zephyr-export
 
-COPY west-build.sh ./
+COPY --chmod=0755 west-build.sh ./
 
 CMD ["./west-build.sh"]
