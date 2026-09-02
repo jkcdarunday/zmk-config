@@ -133,7 +133,7 @@
                         &trans       &trans       &trans       &trans        &trans  &trans  &trans    &trans         &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_PREV C_NEXT &inc_dec_kp LEFT RIGHT>;
+            sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp LEFT RIGHT>;
         };
 
         adjust_layer {
